@@ -1,0 +1,21 @@
+#cloud-config
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEA2kIwFH8F0SbkQzSR81FwNve6uXbxqatS7cIcnNhN45kOwHChhQdYLU3ksTENq71clPU6Ve5zhfH0QLdQwcyZ/W7MICEckXzO6ILCu8B8jLSr+dzrgSU7JTr4rJCCTIWe+dupHaT9ctxntxFL1T5cR0pRWK6J/NUIyh4/Ri1sO3D48bg4B+Cz+jbSOFBytO1PPhNkrYtS/9dnL6TPAqPZPwR5rJzbfmCY3eLcY353PAcD7D/ZcmUK9eUgMyTLFzVS/6v5PXg5Q3KVe7ssB/O0TpVcJnUXeh+nVPkmOLyk9njlFW7+xz/A6SlIwXHrFZRrDocj2z/R4Mfa+q8Y5eiTFQ== admin@rancheros.local
+
+hostname: RancherOS.Al3okab.net
+
+rancher:
+  network:
+    interfaces:
+      eth*:
+       dhcp: false
+      eth0:
+       address: 192.168.3.41/24
+       gateway: 192.168.3.1
+    dns:
+     nameservers:
+      - 1.1.1.1
+      - 8.8.8.8
+      - 9.9.9.9
+      - 46.227.67.134
+      - 192.165.9.158
